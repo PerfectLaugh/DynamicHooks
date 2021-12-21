@@ -85,3 +85,8 @@ If(WIN32)
 Else()
     Target_Link_Libraries(DynamicHooks ${CMAKE_SOURCE_DIR}/thirdparty/AsmJit/lib/libAsmJit.a)
 Endif()
+
+
+install(TARGETS DynamicHooks ARCHIVE DESTINATION lib )
+
+install(FILES ${HEADER_FILES} DESTINATION include)
